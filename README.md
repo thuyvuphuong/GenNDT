@@ -5,11 +5,7 @@ Before running the code, please manually download the required pretrained compon
 
 ### 🔗 Download Links:
 You can get them from the [CompVis/stable-diffusion-v1-4](https://huggingface.co/CompVis/stable-diffusion-v1-4)
-pretrained_model/
-└── stable-diffusion-v1-4/
-    ├── text_encoder/
-    ├── tokenizer/
-    └── scheduler/
+and save to pretrained_model folder
 
 ### 📌 Usage in Code:
 Make sure your model paths are set like this:
