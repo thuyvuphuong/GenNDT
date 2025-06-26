@@ -1,5 +1,4 @@
 pretrained_model/
 genNDT_model/
 diffusers/
-
 *.csv
