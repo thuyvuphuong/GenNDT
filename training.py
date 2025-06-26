@@ -995,7 +995,9 @@ def main():
                         encoder_hidden_states,
                         args.dream_detail_preservation,
                     )
-
+                print(noisy_latents.shape)
+                print(timesteps.shape)
+                print(encoder_hidden_states.shape)
                 # Predict the noise residual and compute loss
                 model_pred = unet(noisy_latents, timesteps, encoder_hidden_states, return_dict=False)[0]
                 

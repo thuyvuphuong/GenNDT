@@ -52,10 +52,23 @@ prompt = (
 # =======================
 # Generate signal
 # =======================
-output = pipe(prompt, num_inference_steps=50, guidance_scale=7.5)
-signal = output["signal"][0]  # shape: [L]
+output = pipe(prompt, num_inference_steps=50, 
+              guidance_scale=7.5,
+              signal_length=500,
+              latent_length=64)
+signal = output["signals"][0]
 
-# %%
-plt.plot(signal)
+plt.figure(figsize=(10, 2))
+plt.plot(signal, linewidth=1)
+plt.title("Generated 1D Signal", fontsize=10)
+plt.xlabel("Time Step")
+plt.ylabel("Amplitude")
+plt.grid(True)
+
+# Save to file
+plt.tight_layout()
+plt.savefig("generated_signal.png", dpi=300)
+plt.close()
+
 
 # %%
